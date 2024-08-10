@@ -26,44 +26,44 @@ Pour effectuer cette migration, les prérequis suivants sont nécessaires :
 - Connexion à Azure
     Entrez le nom d'utilisateur et le mot de passe de l'utilisateur de votre Microsoft Entra ID dans Azure AD Connect et cliquez sur Suivant.
 
-      ![2](https://github.com/user-attachments/assets/f437bd3a-076d-48d6-a417-01976aecebc9)
+  ![2](https://github.com/user-attachments/assets/f437bd3a-076d-48d6-a417-01976aecebc9)
 
-      Le nom d'utilisateur requis peut être trouvé sous Issuer Assigned ID.
-      ![3](https://github.com/user-attachments/assets/8f22fa13-89c9-4e3f-b1a3-fd90d8098d68)
+  Le nom d'utilisateur requis peut être trouvé sous Issuer Assigned ID.
+  ![3](https://github.com/user-attachments/assets/8f22fa13-89c9-4e3f-b1a3-fd90d8098d68)
   
-    Ensuite, entrez ces mêmes informations dans la fenêtre de connexion ci-après pour vous connecter à votre compte Azure.
+  Ensuite, entrez ces mêmes informations dans la fenêtre de connexion ci-après pour vous connecter à votre compte Azure.
 
-      ![4](https://github.com/user-attachments/assets/48fc49ab-920b-4d9d-afa5-eb06eca76174)
+  ![4](https://github.com/user-attachments/assets/48fc49ab-920b-4d9d-afa5-eb06eca76174)
 
     Configuration du site de confiance  :
   
-        Une fenêtre d'internet explorer s'ouvrira a cause d'un probleme de javascript, cliquer sur ajouter pour ajouter le site comme un site de confiance
+  Une fenêtre d'internet explorer s'ouvrira a cause d'un probleme de javascript, cliquer sur ajouter pour ajouter le site comme un site de confiance
 
-          ![5](https://github.com/user-attachments/assets/cf2fcb2b-767a-4f31-b89f-7b320e0b7b09)
+  ![5](https://github.com/user-attachments/assets/cf2fcb2b-767a-4f31-b89f-7b320e0b7b09)
     
-          ![6](https://github.com/user-attachments/assets/5c993cce-88d7-47ea-9157-86d7b9ec783c)
+  ![6](https://github.com/user-attachments/assets/5c993cce-88d7-47ea-9157-86d7b9ec783c)
 
   Approuvez la connexion avec votre appareil secondaire si cela est configuré, afin qu'Azure AD Connect puisse se connecter à votre compte Azure.
 
-      ![7](https://github.com/user-attachments/assets/65bc24c7-e39a-4865-b310-3e823eec6e41)
+  ![7](https://github.com/user-attachments/assets/65bc24c7-e39a-4865-b310-3e823eec6e41)
 
   Attention Problèmes de sécurité supplémentaires :
   
-      ![8](https://github.com/user-attachments/assets/e2f40b4f-ccc7-401f-b3bf-d9bafcdf5d0b)
+  ![8](https://github.com/user-attachments/assets/e2f40b4f-ccc7-401f-b3bf-d9bafcdf5d0b)
   
-      L'utilisateur administrateur que vous avez ajouté pourrait être bloqué en raison des paramètres de sécurité supplémentaires d'Azure, qui nécessitent une authentification supplémentaire,     
+  L'utilisateur administrateur que vous avez ajouté pourrait être bloqué en raison des paramètres de sécurité supplémentaires d'Azure, qui nécessitent une authentification supplémentaire,     
       comme une vérification multifacteur (MFA).
       
-      Si vous utilisez un compte gratuit, vous devrez disposer d'un Microsoft Entra tenant fonctionnel avec des licences Microsoft Entra ID P1 ou des licences d'essai.
+  Si vous utilisez un compte gratuit, vous devrez disposer d'un Microsoft Entra tenant fonctionnel avec des licences Microsoft Entra ID P1 ou des licences d'essai.
 
-      Si vous ne disposez pas de ces licences, vous pouvez contourner ce problème en désactivant les "security defaults" :
+  Si vous ne disposez pas de ces licences, vous pouvez contourner ce problème en désactivant les "security defaults" :
 
-        Allez dans l'application Microsoft Entra ID (MEID) -> Properties -> Manage security defaults.
+  Allez dans l'application Microsoft Entra ID (MEID) -> Properties -> Manage security defaults.
         Réglez Enable security defaults sur No.
      
-            <img width="897" alt="9" src="https://github.com/user-attachments/assets/a14908f9-66c4-48c2-a491-a844361edded">
+  <img width="897" alt="9" src="https://github.com/user-attachments/assets/a14908f9-66c4-48c2-a491-a844361edded">
 
-        Rôle d'administrateur global : Ce rôle est requis pour contourner le blocage d'Azure. Assurez-vous que l'utilisateur ajouté est configuré comme Global Administrator dans Azure.
+   Rôle d'administrateur global : Ce rôle est requis pour contourner le blocage d'Azure. Assurez-vous que l'utilisateur ajouté est configuré comme Global Administrator dans Azure.
 
     Note Importante : Dans un environnement de production, il n'est pas recommandé de désactiver les paramètres de sécurité par défaut. Ces paramètres sont importants pour garantir une sécurité 
     optimale. L'utilisation du rôle d'administrateur global pour contourner des blocages peut exposer votre environnement à des risques de sécurité.
@@ -95,18 +95,18 @@ Pour effectuer cette migration, les prérequis suivants sont nécessaires :
 
     Problème avec TLS 1.2 : Si une erreur liée à TLS 1.2 survient pendant l'installation, vérifiez les paramètres de votre registre.
 
-      ![13](https://github.com/user-attachments/assets/08bcc78c-5d14-4e27-ab75-e0788a7e0e08)
+  ![13](https://github.com/user-attachments/assets/08bcc78c-5d14-4e27-ab75-e0788a7e0e08)
   
     Activation de TLS 1.2 : Assurez-vous que TLS 1.2 est activé, sinon la synchronisation ne pourra pas être effectuée. Pour activer TLS 1.2, suivez les instructions fournies dans le lien 
     suivant :
     
-      https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-tls-enforcement
+  https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-tls-enforcement
 
 - Configuration terminée :
 
 Tout est prêt ! La configuration d'Azure AD Connect est maintenant terminée. Vous avez établi la connexion entre votre Active Directory on-premises et Azure AD, et vous avez configuré la synchronisation des identités. Vous pouvez maintenant vérifier que la synchronisation fonctionne correctement et surveiller les mises à jour dans le portail Azure.
 
-    ![14](https://github.com/user-attachments/assets/82959490-c333-4d5b-9a42-5b94219fd619)
+![14](https://github.com/user-attachments/assets/82959490-c333-4d5b-9a42-5b94219fd619)
 
 - Comparaison des identités on-premises avec les utilisateurs Azure :
 
