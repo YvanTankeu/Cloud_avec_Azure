@@ -1,3 +1,6 @@
+Migration et Synchronisation des Identités On-Premises avec Azure AD Connect
+============================================================================
+
 Je possède des utilisateurs et des groupes d'utilisateurs dans mon Active Directory Domain Services (AD DS) sous Windows Server 2022, et je souhaite les migrer vers Azure. Vous pouvez voir ces utilisateurs et groupes dans l'image ci-dessous.
 
 ![16](https://github.com/user-attachments/assets/8c1ebde5-9787-49ba-b2ce-c41ba3b60b73)
@@ -12,7 +15,7 @@ Pour effectuer cette migration, les prérequis suivants sont nécessaires :
 
 - Téléchargement de l'application :
 
-    - Téléchargez et installez l'application Azure AD Connect sur votre serveur Windows depuis le lien suivant : Azure AD Connect Download.
+    - Téléchargez et installez l'application Azure AD Connect sur votre serveur Windows depuis le lien suivant : [Azure AD Connect Download.](https://www.microsoft.com/en-ie/download/details.aspx?id=47594&msockid=293044c43edd6b7d3589572a3fe66a0a)
 
 - Exécution de l'application :
 
@@ -24,6 +27,7 @@ Pour effectuer cette migration, les prérequis suivants sont nécessaires :
   On va utiliser la configuration rapide pour ce tuto, alors cliquez sur configuration rapide en vers qui nous emmenera a la  prochaine étape
 
 - Connexion à Azure
+  
     Entrez le nom d'utilisateur et le mot de passe de l'utilisateur de votre Microsoft Entra ID dans Azure AD Connect et cliquez sur Suivant.
 
   ![2](https://github.com/user-attachments/assets/f437bd3a-076d-48d6-a417-01976aecebc9)
@@ -124,23 +128,8 @@ Voici une vue des utilisateurs synchronisés et visibles dans votre Azure Active
   ![15](https://github.com/user-attachments/assets/3b4b0a4d-9a19-4ad6-8a57-5c3958cfc5d3)
 
 
-    
-Si vous avez des questions ou rencontrez des problèmes, consultez la documentation ou les ressources de support pour obtenir de l'aide supplémentaire.
+### Réseaux 
+--------------
+- [Discord](https://discord.com/users/yvantankeu)
+- [LinkedIn](https://www.linkedin.com/in/yvan-tankeu-ab029a129/)
 
-
-
-
-
-
-
-
-
-
-      
-      
-
-
-
-
-      
-Ces étapes vous permettront de migrer efficacement vos utilisateurs et groupes d'utilisateurs vers Azure.
