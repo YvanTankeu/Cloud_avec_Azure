@@ -121,7 +121,8 @@ Utilisateurs Azure :
 
 Voici une vue des utilisateurs synchronisés et visibles dans votre Azure Active Directory (Azure AD) après la configuration et la synchronisation effectuées.
 
-  ![15](https://github.com/user-attachments/assets/ee750bfc-7d84-477e-b20a-aa9a21f3a4f5)
+  ![15](https://github.com/user-attachments/assets/3b4b0a4d-9a19-4ad6-8a57-5c3958cfc5d3)
+
 
     
 Si vous avez des questions ou rencontrez des problèmes, consultez la documentation ou les ressources de support pour obtenir de l'aide supplémentaire.
