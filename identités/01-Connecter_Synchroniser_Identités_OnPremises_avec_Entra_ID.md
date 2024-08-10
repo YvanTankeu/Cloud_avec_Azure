@@ -1,4 +1,5 @@
 Je possède des utilisateurs et des groupes d'utilisateurs dans mon Active Directory Domain Services (AD DS) sous Windows Server 2022, et je souhaite les migrer vers Azure. Vous pouvez voir ces utilisateurs et groupes dans l'image ci-dessous.
+
 ![16](https://github.com/user-attachments/assets/8c1ebde5-9787-49ba-b2ce-c41ba3b60b73)
 
 Pour effectuer cette migration, les prérequis suivants sont nécessaires :
