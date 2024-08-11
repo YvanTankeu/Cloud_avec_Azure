@@ -61,11 +61,92 @@ Configurer l’application web pour se connecter au coffre de clés
 
   -> Choisir le membre, qui est votre appliction web et cliquez sur select une fois fait
   
-  ![9](https://github.com/user-attachments/assets/3732d0f2-ef6c-4afd-9040-0f1a9b566e8f)
+  ![9](https://github.com/user-attachments/assets/0d394662-de95-4779-b0d9-f7917857181a)
+
+
+3 - Creez des secrets dans azure Key Vault
+
+  Pour acceder a nos secrets, il va falloir que ceux-ci existent, alors nous devons creer nos secrets.
+
+  La ressource Kyevault qui a ete creer dans les prerequis, on doit l'acceder pour creer nos secrets qui sont consideres comme des mots de passe.
+
+  Dans Keyvault -> Objects -> Secrets, vous verrez la liste des secrets que jai creee tres facilelemt
+
+  ![keyvault1](https://github.com/user-attachments/assets/70b41271-6ee5-41cd-92ab-10b873577643)
+
+  Pour en creer, vous devez cliquer sur
+
+  -> sur "Generat/Import"
+
+  ![keyvault2](https://github.com/user-attachments/assets/772c6ad0-201f-4260-a736-39605bff50aa)
+
+  -> la fenêtre de creation apparait, entrez le nom et la valeur de votre secret et par la suite cliquez sur "Create"
+
+  ![keyvault3](https://github.com/user-attachments/assets/28fb5876-4266-47aa-8af0-a284e4c15121)
+
+
+4 - Acceder aux secrets via notre application web
+
+Voici le code que jai utilise pour acceder au secrets via l'application web
+
+    using Azure;
+    using Azure.Identity;
+    using Azure.Security.KeyVault.Secrets;
+    using Azure.Core;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.Extensions.DependencyInjection;
+    
+    var builder = WebApplication.CreateBuilder(args);
+    var app = builder.Build();
+    
+    // Configuration des options du client
+    SecretClientOptions options = new SecretClientOptions()
+    {
+        Retry =
+        {
+            Delay = TimeSpan.FromSeconds(2),
+            MaxDelay = TimeSpan.FromSeconds(16),
+            MaxRetries = 5,
+            Mode = RetryMode.Exponential
+        }
+    };
+    
+    // Créez un client pour accéder au Key Vault
+    var client = new SecretClient(new Uri("https://<your-unique-key-vault-name>.vault.azure.net/"), new DefaultAzureCredential(), options);
+    
+    // Route pour récupérer et afficher tous les secrets
+    app.MapGet("/", async () =>
+    {
+        var secretValues = new List<string>();
+    
+        // Récupérez les propriétés de tous les secrets
+        await foreach (var secretProperties in client.GetPropertiesOfSecretsAsync())
+        {
+            try
+            {
+                // Récupérez chaque secret par son nom
+                KeyVaultSecret secret = await client.GetSecretAsync(secretProperties.Name);
+                secretValues.Add($"{secretProperties.Name}: {secret.Value}");
+            }
+            catch (RequestFailedException ex)
+            {
+                // Gestion des erreurs éventuelles lors de la récupération d'un secret
+                secretValues.Add($"Erreur pour {secretProperties.Name}: {ex.Message}");
+            }
+        }
+    
+        // Retournez les secrets comme une chaîne formatée
+        return string.Join("\n", secretValues);
+    });
+    
+    app.Run();
+
+pour un resulat incroyable
+
+![keyvault4](https://github.com/user-attachments/assets/5ed145cc-0723-4095-84f5-2a67b73f72d4)
 
 
 
-  
 
 
 
