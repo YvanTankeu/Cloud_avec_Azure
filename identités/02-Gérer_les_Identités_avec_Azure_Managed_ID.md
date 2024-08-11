@@ -7,8 +7,9 @@ J'ai un Key Vault dans Azure qui contient mes mots de passe et autres secrets. J
 
    ![image](https://github.com/user-attachments/assets/005294fb-092f-43ee-af09-58741797d7a5)
    
-- Scénario
-  Vous avez une application web en .NET que vous souhaitez déployer sur Azure App Service. Votre application doit accéder à des secrets stockés dans Azure Key Vault, comme des mots de passe ou des clés API, pour les afficher ou les utiliser. Pour garantir la sécurité, vous utiliserez une identité managée, ce qui évite de stocker des informations d'identification sensibles dans votre code.
+Scénario
+
+Vous avez une application web en .NET que vous souhaitez déployer sur Azure App Service. Votre application doit accéder à des secrets stockés dans Azure Key Vault, comme des mots de passe ou des clés API, pour les afficher ou les utiliser. Pour garantir la sécurité, vous utiliserez une identité managée, ce qui évite de stocker des informations d'identification sensibles dans votre code.
 
 Prérequis
 
@@ -20,19 +21,20 @@ Configurer l’application web pour se connecter au coffre de clés
 
 1 - Créer une identité managée dans azure pour votre application web
 
-  1 - Dans le portail Azure, accédez à votre application web.
 
-  2 - Allez dans Settings > Identity > System Assigned.
+  - Dans le portail Azure, accédez à votre application web.
+
+  - Allez dans Settings > Identity > System Assigned.
   
-  3 - Activez l'option en basculant de "Off" à "On" et cliquez sur Save pour enregistrer les modifications.
+  - Activez l'option en basculant de "Off" à "On" et cliquez sur Save pour enregistrer les modifications.
 
  ![donneruneidentitealawebapp1](https://github.com/user-attachments/assets/0ea2280e-960b-4e09-9d57-96e3cb9fb955)
 
-  4 - Confirmez l'activation de l'identité managée.
+  - Confirmez l'activation de l'identité managée.
 
  ![donneruneidentitealawebapp2](https://github.com/user-attachments/assets/ed957bab-5681-4e78-83c1-5ba343072663)
 
-  5 - Vous verrez l'ID de l'objet de l'identité managée, un principal de service créé dans votre locataire.
+  - Vous verrez l'ID de l'objet de l'identité managée, un principal de service créé dans votre locataire.
   
   ![donneruneidentitealawebapp3](https://github.com/user-attachments/assets/7feec3ec-d8a6-4f3b-b876-71ec3523502f)
 
@@ -41,31 +43,31 @@ Configurer l’application web pour se connecter au coffre de clés
 
   Pour permettre à votre application web d'accéder aux secrets dans Azure Key Vault, vous devez lui accorder les autorisations nécessaires via le contrôle d'accès en fonction du rôle (RBAC).
 
-  1 - Dans la ressource de votre application web, allez dans Access Control (IAM).  
+  - Dans la ressource de votre application web, allez dans Access Control (IAM).  
 
    ![role1](https://github.com/user-attachments/assets/238b548c-588a-4fc9-8299-106f801e8d8e)
 
- 2 - Cliquez sur Add role assignment.
+ - Cliquez sur Add role assignment.
  
    ![role2](https://github.com/user-attachments/assets/daa54502-f887-46fd-8415-bc935e2026c3)
 
-  3 - Dans la liste des rôles, sélectionnez Key Vault Secrets User et cliquez sur Next.
+  - Dans la liste des rôles, sélectionnez Key Vault Secrets User et cliquez sur Next.
 
   ![15](https://github.com/user-attachments/assets/a86c0fa5-9a58-435b-93de-d05620fe8c6c)
 
-   4 - Cliquez sur Managed identity et sélectionnez Select Members.
+   - Cliquez sur Managed identity et sélectionnez Select Members.
 
   ![16](https://github.com/user-attachments/assets/0402581f-ad7c-4d26-b236-4d7a9dfabda3)
 
-  5 - Choisissez votre abonnement de l'application web dans Select Members
+  - Choisissez votre abonnement de l'application web dans Select Members
 
   ![7](https://github.com/user-attachments/assets/ab76d28e-11e9-496f-ac31-d99924043487)
 
-  6 - Sélectionnez l'identité managée que vous avez créée et cliquez sur Select.
+  - Sélectionnez l'identité managée que vous avez créée et cliquez sur Select.
 
   ![8](https://github.com/user-attachments/assets/94c44528-f452-4fc1-b920-4031b3929875)
 
-  7 - Cliquez sur Select pour confirmer la sélection de l'application web comme membre.
+  - Cliquez sur Select pour confirmer la sélection de l'application web comme membre.
   
   ![9](https://github.com/user-attachments/assets/0d394662-de95-4779-b0d9-f7917857181a)
 
@@ -74,17 +76,17 @@ Configurer l’application web pour se connecter au coffre de clés
 
   Pour acceder a nos secrets, il va falloir que ceux-ci existent, alors nous devons creer nos secrets.
 
-  1 - Accédez à votre Key Vault depuis le portail Azure.
+  - Accédez à votre Key Vault depuis le portail Azure.
 
-  2 - Dans la section Objects > Secrets, vous verrez la liste des secrets existants.
+  - Dans la section Objects > Secrets, vous verrez la liste des secrets existants.
 
   ![keyvault1](https://github.com/user-attachments/assets/70b41271-6ee5-41cd-92ab-10b873577643)
 
-  3 - Pour ajouter un nouveau secret, cliquez sur Generate/Import.
+  - Pour ajouter un nouveau secret, cliquez sur Generate/Import.
 
   ![keyvault2](https://github.com/user-attachments/assets/772c6ad0-201f-4260-a736-39605bff50aa)
 
-  4 - Dans la fenêtre de création, entrez le nom et la valeur de votre secret, puis cliquez sur Create.
+  - Dans la fenêtre de création, entrez le nom et la valeur de votre secret, puis cliquez sur Create.
 
   ![keyvault3](https://github.com/user-attachments/assets/28fb5876-4266-47aa-8af0-a284e4c15121)
 
