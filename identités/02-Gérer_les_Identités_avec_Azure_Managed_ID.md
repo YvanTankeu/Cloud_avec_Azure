@@ -144,6 +144,8 @@ Voici le code que jai utilise pour acceder au secrets via l'application web
 pour un resulat incroyable
 
 ![keyvault4](https://github.com/user-attachments/assets/5ed145cc-0723-4095-84f5-2a67b73f72d4)
+![image](https://github.com/user-attachments/assets/6af8b667-1609-4848-83b4-c4c89c1a3bc2)
+
 
 
 
