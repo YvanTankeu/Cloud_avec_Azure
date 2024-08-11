@@ -15,13 +15,20 @@ Pour suivre le tuto voic les prerequis
   - Créer une ressource Azure Key Vault et le provisionner de mots de passes : Configurez un Key Vault dans Azure pour stocker vos secrets de manière sécurisée.
 
 
-1 - Créer une identité managée dans azure
+1 - Créer une identité managée dans azure pour votre application web
 
-  cette IM vous pemettra de creer un compte 
+  Dans le portail d'azure, allez sur votre webapp -> Settings -> Identity -> System Assigned -> Switch from "Off" to "On"  et cliquez sur "Save" pour sauvegader 
 
-  Dans le portail d'azure, cherchez Managed identities 
+ ![donneruneidentitealawebapp1](https://github.com/user-attachments/assets/0ea2280e-960b-4e09-9d57-96e3cb9fb955)
 
-  ![image](https://github.com/user-attachments/assets/d648d321-f602-45a6-827a-42e66790c46e)
+ Une fois cela fait on vous demandera si vous voulez activer identité gérée attribuée par le système
+
+ ![donneruneidentitealawebapp2](https://github.com/user-attachments/assets/ed957bab-5681-4e78-83c1-5ba343072663)
+
+ la suite ressemblera a ca
+
+![donneruneidentitealawebapp3](https://github.com/user-attachments/assets/7feec3ec-d8a6-4f3b-b876-71ec3523502f)
+
 
   Creez en une identite manage en cliquant sur create comme vous le voyez en image, j'en ai deja cree un au nom de identitePrincipal
 
