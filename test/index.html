@@ -1,1 +1,6 @@
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
 
+var client = new SecretClient(new Uri("https://your-keyvault-name.vault.azure.net/"), new DefaultAzureCredential());
+KeyVaultSecret secret = await client.GetSecretAsync("your-secret-name");
+string secretValue = secret.Value;
