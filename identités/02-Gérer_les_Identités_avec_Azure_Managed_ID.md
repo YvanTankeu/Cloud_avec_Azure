@@ -19,4 +19,5 @@ Pour suivre le tuto voic les prerequis
 
   Dans le portail d'azure, cherchez Managed identities 
 
-  ![image](https://github.com/user-attachments/assets/ddbe1ae7-579d-4502-b3b1-d09fbbf3e054)
+  ![image](https://github.com/user-attachments/assets/d648d321-f602-45a6-827a-42e66790c46e)
+
