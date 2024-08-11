@@ -17,7 +17,14 @@ Pour suivre le tuto voic les prerequis
 
 1 - Créer une identité managée dans azure
 
+  cette IM vous pemettra de creer un compte 
+
   Dans le portail d'azure, cherchez Managed identities 
 
   ![image](https://github.com/user-attachments/assets/d648d321-f602-45a6-827a-42e66790c46e)
+
+  Creez en une identite manage en cliquant sur create comme vous le voyez en image, j'en ai deja cree un au nom de identitePrincipal
+
+  ![image](https://github.com/user-attachments/assets/8e2844de-3e78-429b-aa65-a1e359b51bda)
+
 
