@@ -14,6 +14,7 @@ Pour suivre le tuto voic les prerequis
 
   - Créer une ressource Azure Key Vault et le provisionner de mots de passes : Configurez un Key Vault dans Azure pour stocker vos secrets de manière sécurisée.
 
+Configurer l’application web pour se connecter au coffre de clés
 
 1 - Créer une identité managée dans azure pour votre application web
 
@@ -25,13 +26,53 @@ Pour suivre le tuto voic les prerequis
 
  ![donneruneidentitealawebapp2](https://github.com/user-attachments/assets/ed957bab-5681-4e78-83c1-5ba343072663)
 
- la suite ressemblera a ca
+ la suite ressemblera a ca avec une ID d’objet : objet de principal de service de l’identité managée.
 
 ![donneruneidentitealawebapp3](https://github.com/user-attachments/assets/7feec3ec-d8a6-4f3b-b876-71ec3523502f)
 
 
-  Creez en une identite manage en cliquant sur create comme vous le voyez en image, j'en ai deja cree un au nom de identitePrincipal
+2 - Attribuer l’accès à une identité managée a votre application web
 
-  ![image](https://github.com/user-attachments/assets/8e2844de-3e78-429b-aa65-a1e359b51bda)
+  Pour permettre à votre application web d'accéder aux secrets dans Azure Key Vault, vous devez lui accorder les autorisations nécessaires via le contrôle d'accès en fonction du rôle (RBAC).
+
+  Dans la ressource web application, allez dans Acces Control(IAM)  
+
+  ![role1](https://github.com/user-attachments/assets/238b548c-588a-4fc9-8299-106f801e8d8e)
+
+  -> Add role assignment
+
+  ![role2](https://github.com/user-attachments/assets/daa54502-f887-46fd-8415-bc935e2026c3)
+
+  -> Dans job function roles, entrez le role "Key Vault Secrets User" et puis Next
+
+  ![15](https://github.com/user-attachments/assets/a86c0fa5-9a58-435b-93de-d05620fe8c6c)
+
+  -> Cliquez dans "Managed identify" et puis "Select Members"
+
+  ![16](https://github.com/user-attachments/assets/0402581f-ad7c-4d26-b236-4d7a9dfabda3)
+
+  -> Dans cette fenêtre, choisissez votre abonnement de webapp  dans "Select Members"
+
+  ![7](https://github.com/user-attachments/assets/ab76d28e-11e9-496f-ac31-d99924043487)
+
+  -> Selectionnez votre identiy manage de tout a lheure
+
+  ![8](https://github.com/user-attachments/assets/94c44528-f452-4fc1-b920-4031b3929875)
+
+  -> Choisir le membre, qui est votre appliction web et cliquez sur select une fois fait
+  
+  ![9](https://github.com/user-attachments/assets/3732d0f2-ef6c-4afd-9040-0f1a9b566e8f)
+
+
+
+  
+
+
+
+
+ 
+
+
+
 
 
