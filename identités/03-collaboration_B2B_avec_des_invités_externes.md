@@ -1,20 +1,20 @@
 Sécuriser la Collaboration B2B avec des Partenaires Externes via Microsoft Entra External ID
 ============================================================================================
 
-**Introduction**
+### Introduction
 
 La collaboration avec des partenaires commerciaux et des invités externes est essentielle pour de nombreuses entreprises, mais cela peut souvent poser des défis en matière de gestion des accès et de sécurité des données. Avec Microsoft Entra External ID, vous pouvez faciliter cette collaboration en permettant à votre personnel de partager en toute sécurité des applications et services avec des partenaires externes, même s'ils n'utilisent pas de Microsoft Entra ID ou d'autres services informatiques. Ce guide vous montrera comment mettre en place et gérer efficacement la collaboration B2B dans votre locataire Microsoft Entra, tout en gardant un contrôle total sur vos données d'entreprise.
 
    ![b2b-collaboration-overview](https://github.com/user-attachments/assets/aa4842c5-6c54-41bd-bf1d-5d2e25588be6)
 
 
-**Scénario**
+### Scénario
 
 Imaginez que vous êtes le responsable IT d'une entreprise de conseil en stratégie, StratWise Consulting, qui collabore régulièrement avec diverses entreprises partenaires pour fournir des services à des clients communs. L'un de vos partenaires, Lima tech Solutions, doit accéder à certains outils internes de StratWise pour collaborer sur un projet client important. Cependant, Lima tech n'utilise pas Microsoft Entra ID et dispose de son propre système de gestion des identités.
 
 Votre objectif est de permettre aux employés de Lima tech de collaborer efficacement avec votre équipe tout en maintenant un contrôle strict sur les données de votre entreprise. Grâce à Microsoft Entra External ID, vous pouvez inviter les utilisateurs de Lima tech en tant qu'invités dans votre locataire, leur accorder les autorisations nécessaires pour accéder aux ressources spécifiques, et surveiller leurs activités pour assurer la conformité et la sécurité.
 
-**Prérequis**
+### Prérequis
 
    Pour mettre en place la collaboration B2B avec des invités externes via Microsoft Entra External ID, voici les prérequis nécessaires :
 
@@ -27,7 +27,7 @@ Votre objectif est de permettre aux employés de Lima tech de collaborer efficac
    4 - **Applications et ressources à partager :** Déterminez quelles applications, services ou ressources de votre entreprise seront partagés avec les invités externes.
    
 
-**Collaboration entre StarWise Consulting et Lima Tech Solutions**
+### Collaboration entre StarWise Consulting et Lima Tech Solutions
 
   1 -   Créer un utilisateur externe avec Microsoft Entra ID (MEI)
   
@@ -119,7 +119,7 @@ Dans le portail Azure, vous pouvez accéder à l'utilisateur de nouveau pour vé
 
     ![3-8](https://github.com/user-attachments/assets/d651c7a0-cac4-4ed7-abd1-0f96a0e9c43d)
 
-**Résultat**
+### Résultat
 --------
 
 Voici un exemple de ce à quoi cela pourrait ressembler dans le portail Azure :
