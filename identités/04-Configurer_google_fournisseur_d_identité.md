@@ -35,8 +35,9 @@ En configurant Azure App Service pour utiliser Google comme fournisseur d'authen
     <img src="https://github.com/user-attachments/assets/14ac1d1a-934c-4d33-99f5-bbb64d7bb667" width="45%" />
    </p>
 
-  2 - Dans la fenêtre suivante, dans "Type d'application", choisissez "Application Web" et donnez un nom à votre application.
-  3 - Cliquez sur `AJOUTER UN URI` dans "Origines JavaScript autorisées" et "URI de redirection autorisés", puis terminez en cliquant sur le bouton `CRÉER`.
+  3 - Dans la fenêtre suivante, dans "Type d'application", choisissez "Application Web" et donnez un nom à votre application.
+  
+  4 - Cliquez sur `AJOUTER UN URI` dans "Origines JavaScript autorisées" et "URI de redirection autorisés", puis terminez en cliquant sur le bouton `CRÉER`.
 
    ![image](https://github.com/user-attachments/assets/1913f3f9-59f5-4c76-b504-4e542aae3cae)
 
@@ -57,11 +58,11 @@ En configurant Azure App Service pour utiliser Google comme fournisseur d'authen
    ![1](https://github.com/user-attachments/assets/4161a8a8-909c-4bd9-9a1d-6b131839ca8d)
 
 
-4. Sélectionnez **Google** dans le menu déroulant des fournisseurs d’identité. Collez les valeurs de l'ID d'application et du secret d'application que vous avez obtenues précédemment.
+3. Sélectionnez **Google** dans le menu déroulant des fournisseurs d’identité. Collez les valeurs de l'ID d'application et du secret d'application que vous avez obtenues précédemment.
 
      ![2](https://github.com/user-attachments/assets/c0fae2ad-2aed-4b4d-b5ae-d51ab3ff3248)
 
-5. Inserer votre client ID et client secret genere par google console et cliquez sur `Add`
+4. Inserer votre client ID et client secret genere par google console et cliquez sur `Add`
 
      ![3](https://github.com/user-attachments/assets/4690a962-c816-4271-852d-044295a1ea49)
 
