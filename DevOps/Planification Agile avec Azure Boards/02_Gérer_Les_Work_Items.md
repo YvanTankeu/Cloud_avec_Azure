@@ -82,7 +82,8 @@ Voici la hiérarchie des work items que tu as créés :
      - **Product Backlog Item (PBI) :** En tant que client, je souhaite demander de nouveaux tutoriels  
      - **Product Backlog Item (PBI) :** En tant que client, je veux voir les tutoriels que j'ai récemment visionnés  
 
-![image](https://github.com/user-attachments/assets/50c7b734-1ba4-4be8-8250-50c4a29e4d0a)
+![image](https://github.com/user-attachments/assets/e3d52719-3cb5-45b2-8882-e9d5dca922e7)
+
 
 
 
