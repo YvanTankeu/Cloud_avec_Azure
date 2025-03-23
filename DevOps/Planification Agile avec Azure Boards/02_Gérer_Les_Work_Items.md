@@ -53,8 +53,6 @@ Feature: Une fonctionnalité importante qui fait partie d'un Epic.
 Product Backlog Item (PBI) : Une tâche ou une amélioration à faire pour une Feature.
 
 5. Ajoutez un **Product Backlog Item (PBI)** pour détailler des aspects spécifiques de l’optimisation, par exemple :  
-   - *Améliorer l'indexation des tutoriels récents*  
-   - *Mise en cache des résultats de recherche*  
 
    Pour cela, allez dans la page du Work Item **Optimisation des performances de recherche**, cliquez sur **Add link > New Link**, sélectionnez **Product Backlog Item**, puis **Save and Close**.  
    
@@ -67,12 +65,26 @@ Product Backlog Item (PBI) : Une tâche ou une amélioration à faire pour une F
 Task : Une action précise à réaliser pour terminer un PBI.
 
 6. Définissez des **Tasks** pour attribuer des tâches précises aux membres de l’équipe, par exemple :  
-   - *Optimiser les requêtes SQL pour accélérer la recherche*  
-   - *Mettre en place une API de suggestion de recherche*  
 
    Pour cela, allez dans la page du **Product Backlog Item**, cliquez sur **Add link > New Link**, sélectionnez **Task**, donnez un titre et enregistrez.  
    
-   ![image](https://github.com/user-attachments/assets/bc960db9-2138-4a7b-9e7a-8a06c443bee2)  
+   ![image](https://github.com/user-attachments/assets/bc960db9-2138-4a7b-9e7a-8a06c443bee2)
+
+## FIN
+
+Voici la hiérarchie des work items que tu as créés :
+
+- **Epic : Formation sur les produits**  
+   - **Feature : Tableau de bord de la formation**  
+     - **Product Backlog Item (PBI) :** En tant que client, je veux voir les nouveaux tutoriels  
+       - **Task :** Ajouter une page pour les tutoriels les plus récents  
+       - **Task :** Optimiser la recherche de données pour les tutoriels les plus récents  
+     - **Product Backlog Item (PBI) :** En tant que client, je souhaite demander de nouveaux tutoriels  
+     - **Product Backlog Item (PBI) :** En tant que client, je veux voir les tutoriels que j'ai récemment visionnés  
+
+![image](https://github.com/user-attachments/assets/50c7b734-1ba4-4be8-8250-50c4a29e4d0a)
+
+
 
 
   
