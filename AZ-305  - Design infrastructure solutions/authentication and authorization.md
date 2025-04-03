@@ -3,6 +3,11 @@
 [Consulter l'étude de cas ici](https://microsoftlearning.github.io/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions/Instructions/CaseStudy/07-Access.html)
 
 ---
+Questions de l'étude de cas :
+
+![image](https://github.com/user-attachments/assets/7ea44196-fbc7-4768-9f07-2ebc8dec2ee2)
+
+---
 
 ## **1. New User Accounts**
 
